@@ -42,6 +42,10 @@ console.log(allLists);
 function makeRed() {
   console.log("click");
 
+  const title = document.querySelector("h1");
+  title.classList.add("title");
+
+  console.log(title);
   for (const li of allLists) {
     li.style.color = `red`;
   }
