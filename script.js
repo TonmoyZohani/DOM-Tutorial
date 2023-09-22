@@ -20,6 +20,7 @@
 //   taskList.removeChild(button.parentElement);
 // }
 
+//============================================================================================//
 function addTask() {
   const inputText = document.getElementById("task").value.trim();
   console.log(inputText);
@@ -31,5 +32,17 @@ function addTask() {
     li.innerHTML = `${inputText} <button onclick="removeTask(this)">Remove</button>`;
     console.log(li);
     listTasks.appendChild(li);
+  }
+}
+
+//============================================================================================//
+const allLists = document.getElementsByTagName("li");
+console.log(allLists);
+
+function makeRed() {
+  console.log("click");
+
+  for (const li of allLists) {
+    li.style.color = `red`;
   }
 }
