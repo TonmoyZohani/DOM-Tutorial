@@ -20,6 +20,16 @@
 //   taskList.removeChild(button.parentElement);
 // }
 
-function addTask(){
-    
+function addTask() {
+  const inputText = document.getElementById("task").value.trim();
+  console.log(inputText);
+
+  if (inputText !== "") {
+    const listTasks = document.getElementById("task-list");
+    const li = document.createElement("li");
+    console.log(li);
+    li.innerHTML = `${inputText} <button onclick="removeTask(this)">Remove</button>`;
+    console.log(li);
+    listTasks.appendChild(li);
+  }
 }
